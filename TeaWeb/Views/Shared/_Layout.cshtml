@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="zh-t">
+<head>
+  @Styles.Render("~/Content/css")
+  @Scripts.Render("~/bundles/modernizr")
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>地仁茗茶</title>
+  <meta name="description"
+        content="地仁茗茶" />
+  <meta name="robot" content="index, follow" />
+  <!--googlefont-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+        rel="stylesheet" />
+  <!--link style-->
+  <link rel="stylesheet" href="~/Content/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="~/Image/logo.jpg" alt="logo" />
+    </div>
+
+    <nav>
+      <ul>
+        <li>@Html.ActionLink("首頁", "Index", "Home")</li>
+        <li>@Html.ActionLink("台灣地仁", "About1", "Introduce")</li>
+        <li>@Html.ActionLink("線上買茶", "BuyList", "BuyTea")</li>
+        <li>@Html.ActionLink("聯絡我們", "Index", "Home")</li>
+      </ul>
+    </nav>
+  </header>
+
+  <div>
+    @RenderBody()
+    <hr />
+  </div>
+
+  @Scripts.Render("~/bundles/bootstrap")
+  @RenderSection("scripts", required: false)
+  <footer>
+    <div class="logo">
+      <img src="~/Image/logo.jpg" alt="picture">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="./about_1.html">About</a></li>
+        <li><a href="./buytea.html">Buy</a></li>
+        <li><a href="./content.html">Contant</a></li>
+      </ul>
+    </nav>
+    <section class="link">
+      <a href="#"><img src="~/Image/資源包/Icons/facebook.svg" alt="facebook"></a>
+      <a href="#"><img src="~/Image/資源包/Icons/instagram.svg" alt="instagram"></a>
+      <a href="#"><img src="~/Image/資源包/Icons/twitter.svg" alt="twitter"></a>
+      <a href="#"><img src="~/Image/資源包/Icons/youtube.svg" alt="youtube"></a>
+    </section>
+  </footer>
+</body>
+</html>
